@@ -6,7 +6,7 @@ const OPENAI_API_KEY = process.env.OA_API_KEY
 const ask = (question) => {
   return new Promise((resolve, reject) => {
     const data = JSON.stringify({
-      model: 'gpt-3.5-turbo',
+      model: 'gpt-3.5-turbo-1106',
       messages: [
         {
           role: 'system',
@@ -60,11 +60,11 @@ const ask = (question) => {
 const uliza = (question) => {
     return new Promise((resolve, reject) => {
       const data = JSON.stringify({
-        model: 'gpt-3.5-turbo',
+        model: 'gpt-3.5-turbo-1106',
         messages: [
           {
             role: 'system',
-            content: 'This assistant is trained on answering questions on Diabetes.'
+            content: 'This assistant is trained on answering questions on Diabetes in Swahili.'
           },
           {
             role: 'user',
@@ -72,7 +72,7 @@ const uliza = (question) => {
           },
           {
               role: 'user',
-              content: 'Using 160 characters, what is the answer in Kiswahili?'
+              content: 'Using 160 characters, what is the answer in Swahili?'
             },
           
           
